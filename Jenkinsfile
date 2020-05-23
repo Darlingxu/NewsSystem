@@ -1,10 +1,10 @@
 node {
-    stage('Git Clone'){
+    stage('Git Clone') {
         git([url: 'https://github.com/Darlingxu/NewsSystem.git', branch: 'master']);
     }
-    stage('Maven Clean'){
+    stage('Maven Clean') {
          // Call Maven cleaning life cycle
-         withMaven ( maven : ' maven3.6 ' ) {
+         withMaven ( maven : 'maven3.6' ) {
             bat "mvn post-clean"
         }
     }
@@ -19,7 +19,7 @@ node {
 //     }
     internship ( " Maven Test " ) {
         // Execute the test file in the src / test / java folder of the Maven project
-        withMaven ( maven : ' maven3.6 ' ) {
+        withMaven ( maven : 'maven3.6' ) {
             bat "mvn test"
         }
     }   
