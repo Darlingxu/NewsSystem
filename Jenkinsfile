@@ -20,7 +20,8 @@ node {
     stage ( " Maven Test " ) {
         // Execute the test file in the src / test / java folder of the Maven project
         withMaven ( maven : 'maven3.6' ) {
-            bat "mvn test"
+            bat "mvn install"
+            bat "mvn compile"
         }
     }   
 }
