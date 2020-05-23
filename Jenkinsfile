@@ -17,7 +17,7 @@ node {
 //            sh "mvn -B -Dmaven.test.failure.ignore verify"
 //         }
 //     }
-    internship ( " Maven Test " ) {
+    stage ( " Maven Test " ) {
         // Execute the test file in the src / test / java folder of the Maven project
         withMaven ( maven : 'maven3.6' ) {
             bat "mvn test"
